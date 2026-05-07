@@ -1,30 +1,70 @@
-# Simple Landing Page
+# andig — Newsletter Landing Page
 
+An open-source, single-page newsletter landing page. Clean dark design with editorial typography. No frameworks, no build tools — just HTML and CSS.
 
+## Preview
 
+![Hero](https://i.imgur.com/Wmcciq8.png)
+![Mobile](https://i.imgur.com/tXLM6at.png)
 
+## Stack
 
-## Features
+- Plain HTML5 + CSS3 (no JS frameworks)
+- [Bebas Neue](https://fonts.google.com/specimen/Bebas+Neue) + [IBM Plex Mono](https://fonts.google.com/specimen/IBM+Plex+Mono) via Google Fonts
+- Zero dependencies, zero build step
 
-- Simple version with navbar and header | Versão simples com navbar e header
+## Structure
 
+```
+landingpage1/
+├── index.html
+├── styles/
+│   └── style.css       # All styles, single file
+└── components/
+    └── images/
+        ├── Logo.svg
+        ├── headerwoman.svg
+        └── icons/
+            └── whatsapp.svg
+```
 
+## Sections
 
-This text you see here is *actually- written in Markdown! To get a feel
-for Markdown's syntax, type some text into the left window and
-watch the results in the right.
+| Section | Description |
+|---|---|
+| **Hero** | Headline + email subscribe form |
+| **O que tem lá dentro** | Content categories with editorial numbering |
+| **Edições recentes** | Horizontal-scroll archive of past issues |
+| **Depoimentos** | Reader testimonials |
+| **Assine** | Second call-to-action + form |
+| **Footer** | Links + license |
 
-## Print
+## Usage
 
-Here we can see some screenshots taken of the page | Here we can see some screenshots taken of the page
+No setup needed. Clone and open `index.html` in a browser.
 
+```bash
+git clone https://github.com/your-user/landingpage1.git
+cd landingpage1
+open index.html
+```
 
-![alt text](https://i.imgur.com/pSliP7X.jpg)
-![alt text](https://i.imgur.com/xykL1cT.jpg)
+To connect the subscribe form to a real backend, replace the `form.addEventListener('submit', ...)` handlers in the `<script>` block at the bottom of `index.html`.
+
+## Customization
+
+All design tokens (colors, fonts, spacing) live at the top of `style.css` under `:root`:
+
+```css
+:root {
+  --bg:      #09080A;
+  --accent:  #FF6B1A;
+  --fg:      #EAE4D9;
+  /* ... */
+}
+```
 
 ## License
 
-MIT
-
-**Free Code, Hell Yeah!**
+MIT — free to use, modify, and distribute.
 

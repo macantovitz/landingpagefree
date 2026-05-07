@@ -1,100 +1,352 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <!--====== Style css ======-->
-    <link rel="stylesheet" href="styles/style.css">
-    <link rel="stylesheet" href="styles/default.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>andig — Newsletter</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-    <div class="navbar-area navbar-transparent ">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2"></div>
-                <div class="col-lg-10">
-                    <nav class="navbar navbar-expand-lg ml-center">
-                        <a class="navbar-brand" href="#">
-                            <img src="components/images/Logo.svg" alt="Logo">
-                        </a>
 
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarOne"
-                            aria-controls="navbarOne" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="toggler-icon"></span>
-                            <span class="toggler-icon"></span>
-                            <span class="toggler-icon"></span>
-                        </button>
+  <!-- Atmospheric background layers -->
+  <div class="bg-layer" aria-hidden="true">
+    <div class="bg-glow"></div>
+    <div class="bg-grid"></div>
+    <div class="bg-scanlines"></div>
+    <div class="bg-vignette"></div>
+  </div>
 
-                        <div class="collapse navbar-collapse sub-menu-bar" id="navbarOne">
-                            <ul class="navbar-nav m-auto">
-                                <li class="nav-item active">
-                                    <a class="page-scroll" href="#home">Inicio</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#contato">Contato</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="page-scroll" href="#whatsapp" style="color:#FFA621;"><img
-                                            src="components/images/icons/whatsapp.svg"
-                                            alt="Icon">&nbsp;&nbsp;Whatsapp</a>
-                                </li>
-
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-
-            </div>
-        </div>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <img src="components/images/Logo.svg" alt="andig" height="22">
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home" class="nav-link">Início</a></li>
+        <li><a href="#conteudo" class="nav-link">Conteúdo</a></li>
+        <li><a href="#edicoes" class="nav-link">Edições</a></li>
+        <li><a href="#assine" class="nav-link">Assinar</a></li>
+        <li>
+          <a href="#whatsapp" class="nav-link nav-whatsapp">
+            <img src="components/images/icons/whatsapp.svg" alt="" width="15" aria-hidden="true">
+            Whatsapp
+          </a>
+        </li>
+      </ul>
     </div>
-    <br><br><br><br><br><br><br><br><br>
-    <header>
-        <div class="container">
-            <Div class="row">
-                <div class="col-xl-6 col-lg-6 col-md-7">
-                    <div class="row">
-                        <div class="col-xl-12 col-lg-12 col-md-6">
-                            <div class="row">
-                                <div class="textheader">
-                                    <div class="row">
-                                        <h2 class="textoneheader" style="color:white; font-size: 55px;">Assine o nosso
-                                        </h2>
-                                    </div>
-                                    <div class="row">
-                                        <h2 class="texttwoheader" style="color:white; font-size: 70px; color:#FFA621">
-                                            Newsletter</h2>
-                                    </div>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="inputnewsletter"
-                                    style="width: 100% !important; height: 50px; border-radius: 30px; background-color: #fff;">
-                                    <input type="text" class="emailnewsletter"
-                                        style="border:none; margin: 13px; width: 50%;" placeholder="seunome@email.com">
-                                    <button type="button" class="botaonewsletter"
-                                        style="border: none; background-color: #fff; width: 30px;">ASSINAR</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+  </nav>
 
-                <div class="col-xl-6 col-lg-6 col-md-5">
-                    <div class="womandivider">
-                        <img src="components/images/headerwoman.svg" alt="Icon">
-                    </div>
-                </div>
-            </Div>
+  <!-- Hero Section -->
+  <main class="hero" id="home">
+    <div class="hero-content">
+
+      <!-- Left: Copy + Form -->
+      <div class="hero-text">
+        <p class="hero-eyebrow">— assine o nosso</p>
+
+        <h1 class="hero-title">
+          <span class="hero-title-line">News</span><span class="hero-title-line hero-title-accent">letter</span>
+        </h1>
+
+        <p class="hero-sub">
+          Conteúdo selecionado, sem ruído.<br>
+          Direto na sua caixa de entrada.
+        </p>
+
+        <form class="hero-form" id="newsletterForm" novalidate>
+          <div class="form-track">
+            <input
+              type="email"
+              class="form-input"
+              id="emailInput"
+              placeholder="seunome@email.com"
+              autocomplete="email"
+              required
+            >
+            <button type="submit" class="form-btn">
+              <span>ASSINAR</span>
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+          <p class="form-note" id="formMsg" aria-live="polite"></p>
+        </form>
+
+        <p class="hero-note">Sem spam &middot; Cancele quando quiser &middot; Grátis</p>
+      </div>
+
+      <!-- Right: Visual -->
+      <div class="hero-visual" aria-hidden="true">
+        <div class="hero-issue-tag">
+          <span class="hit-vol">Vol. I &nbsp;/&nbsp; #012</span>
+          <span class="hit-date">Abr 2026</span>
         </div>
-    </header>
+        <img src="components/images/headerwoman.svg" alt="" class="hero-image">
+        <div class="hero-glow-spot"></div>
+      </div>
 
+    </div>
+
+    <!-- Scrolling ticker -->
+    <div class="ticker-bar" aria-hidden="true">
+      <div class="ticker-track">
+        <span class="ticker-item">Newsletter</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Assine Grátis</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Todo Mês</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Curadoria</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Sem Spam</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Newsletter</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Assine Grátis</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Todo Mês</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Curadoria</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Sem Spam</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Newsletter</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Assine Grátis</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Todo Mês</span>
+        <span class="ticker-sep">✦</span>
+        <span class="ticker-item">Curadoria</span>
+        <span class="ticker-sep">✦</span>
+      </div>
+    </div>
+  </main>
+
+  <!-- ─── O que tem lá dentro ──────────────────────────────── -->
+  <section class="inside" id="conteudo">
+    <div class="section-inner">
+
+      <header class="section-header">
+        <p class="section-label">— o que tem lá dentro</p>
+        <h2 class="section-title">Conteúdo que<br>vale o seu tempo.</h2>
+        <p class="section-desc">Cada edição tem uma seleção enxuta de quatro temas. Nada de clickbait, nada de padding.</p>
+      </header>
+
+      <div class="inside-grid">
+        <article class="inside-item">
+          <span class="inside-num">01</span>
+          <div class="inside-body">
+            <h3 class="inside-name">Tecnologia</h3>
+            <p class="inside-desc">O que realmente importa no mundo tech — sem hype, sem jargão desnecessário.</p>
+          </div>
+        </article>
+        <article class="inside-item">
+          <span class="inside-num">02</span>
+          <div class="inside-body">
+            <h3 class="inside-name">Design</h3>
+            <p class="inside-desc">Tendências, ferramentas e reflexões sobre como criamos experiências digitais.</p>
+          </div>
+        </article>
+        <article class="inside-item">
+          <span class="inside-num">03</span>
+          <div class="inside-body">
+            <h3 class="inside-name">Cultura</h3>
+            <p class="inside-desc">Livros, filmes, música e referências que ampliam perspectivas. Sem algoritmo.</p>
+          </div>
+        </article>
+        <article class="inside-item">
+          <span class="inside-num">04</span>
+          <div class="inside-body">
+            <h3 class="inside-name">Links da Semana</h3>
+            <p class="inside-desc">Cinco links que você provavelmente não viu, selecionados com cuidado real.</p>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ─── Edições recentes ──────────────────────────────────── -->
+  <section class="issues" id="edicoes">
+    <div class="section-inner">
+      <header class="section-header section-header--row">
+        <div>
+          <p class="section-label">— edições recentes</p>
+          <h2 class="section-title">Veja antes de assinar.</h2>
+        </div>
+        <a href="#assine" class="btn-ghost">Ver arquivo <span aria-hidden="true">→</span></a>
+      </header>
+    </div>
+
+    <div class="issues-scroll" role="list">
+      <article class="issue-card" role="listitem">
+        <span class="issue-badge">#012</span>
+        <time class="issue-date" datetime="2026-04">Abr 2026</time>
+        <h3 class="issue-title">O fim das interfaces como conhecemos</h3>
+        <p class="issue-excerpt">Como agentes de IA estão redefinindo o que entendemos por UX — e por que designers precisam se reposicionar.</p>
+        <a href="#assine" class="issue-read">Ler edição <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="issue-card" role="listitem">
+        <span class="issue-badge">#011</span>
+        <time class="issue-date" datetime="2026-03">Mar 2026</time>
+        <h3 class="issue-title">A segunda vida do design de sistemas</h3>
+        <p class="issue-excerpt">Design systems morreram e renasceram melhores. Um retrospecto honesto de uma década de ferramentas.</p>
+        <a href="#assine" class="issue-read">Ler edição <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="issue-card" role="listitem">
+        <span class="issue-badge">#010</span>
+        <time class="issue-date" datetime="2026-02">Fev 2026</time>
+        <h3 class="issue-title">Por que lemos menos — e o que fazer sobre isso</h3>
+        <p class="issue-excerpt">Atenção fragmentada, conteúdo em excesso e a volta dos formatos longos como reação ao caos.</p>
+        <a href="#assine" class="issue-read">Ler edição <span aria-hidden="true">→</span></a>
+      </article>
+      <article class="issue-card" role="listitem">
+        <span class="issue-badge">#009</span>
+        <time class="issue-date" datetime="2026-01">Jan 2026</time>
+        <h3 class="issue-title">Slow tech: resistência ou nostalgia?</h3>
+        <p class="issue-excerpt">O movimento que quer nos devolver o controle sobre a tecnologia — o que ele acerta e o que erra.</p>
+        <a href="#assine" class="issue-read">Ler edição <span aria-hidden="true">→</span></a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ─── Depoimentos ──────────────────────────────────────── -->
+  <section class="testimonials" id="depoimentos">
+    <div class="section-inner">
+      <p class="section-label">— quem já assina</p>
+
+      <div class="testi-grid">
+        <blockquote class="testi-item">
+          <p class="testi-text">"A única newsletter que abro no mesmo dia que chega. Curadoria impecável."</p>
+          <footer class="testi-by">
+            <span class="testi-name">Lucas M.</span>
+            <span class="testi-role">Designer de Produto</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testi-item testi-item--featured">
+          <p class="testi-text">"Cada edição tem pelo menos uma coisa que muda minha forma de ver o mundo. Isso é raro."</p>
+          <footer class="testi-by">
+            <span class="testi-name">Ana C.</span>
+            <span class="testi-role">Engenheira de Software</span>
+          </footer>
+        </blockquote>
+
+        <blockquote class="testi-item">
+          <p class="testi-text">"Cancelei 5 newsletters e fiquei só com essa. Qualidade sobre quantidade, sempre."</p>
+          <footer class="testi-by">
+            <span class="testi-name">Pedro R.</span>
+            <span class="testi-role">Fundador de Startup</span>
+          </footer>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA Final ─────────────────────────────────────────── -->
+  <section class="cta-final" id="assine">
+    <div class="section-inner cta-inner">
+      <div class="cta-copy">
+        <p class="section-label">— pronto para começar</p>
+        <h2 class="cta-title">Uma vez por mês.<br>Sem enrolação.</h2>
+        <p class="cta-sub">Junte-se a mais de 3.000 leitores que escolheram qualidade em vez de volume.</p>
+      </div>
+      <form class="hero-form cta-form" id="ctaForm" novalidate>
+        <div class="form-track">
+          <input
+            type="email"
+            class="form-input"
+            id="ctaEmailInput"
+            placeholder="seunome@email.com"
+            autocomplete="email"
+            required
+          >
+          <button type="submit" class="form-btn">
+            <span>ASSINAR</span>
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <path d="M2 7H12M12 7L8 3M12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+        <p class="form-note" id="ctaFormMsg" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ─── Footer ────────────────────────────────────────────── -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <img src="components/images/Logo.svg" alt="andig" height="18">
+        <p class="footer-tagline">Conteúdo que vale o seu tempo.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Links do rodapé">
+        <a href="#conteudo" class="footer-link">Conteúdo</a>
+        <a href="#edicoes" class="footer-link">Edições</a>
+        <a href="#assine" class="footer-link">Assinar</a>
+        <a href="#" class="footer-link">Privacidade</a>
+      </nav>
+      <p class="footer-copy">© 2026 andig &mdash; Código aberto sob licença <a href="https://opensource.org/licenses/MIT" class="footer-link" target="_blank" rel="noopener noreferrer">MIT</a>.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      const open = links.classList.toggle('is-open');
+      toggle.classList.toggle('is-active', open);
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    // Close nav on link click
+    links.querySelectorAll('.nav-link').forEach(l =>
+      l.addEventListener('click', () => {
+        links.classList.remove('is-open');
+        toggle.classList.remove('is-active');
+        toggle.setAttribute('aria-expanded', 'false');
+      })
+    );
+
+    // Reusable form handler
+    function bindForm(formId, inputId, msgId) {
+      const form = document.getElementById(formId);
+      const msg  = document.getElementById(msgId);
+      if (!form) return;
+      form.addEventListener('submit', e => {
+        e.preventDefault();
+        const input = document.getElementById(inputId);
+        if (!input.validity.valid) {
+          msg.textContent = '↳ insira um e-mail válido.';
+          msg.className = 'form-note form-note--error';
+          return;
+        }
+        msg.textContent = '✓ você está na lista!';
+        msg.className = 'form-note form-note--ok';
+        input.value = '';
+      });
+    }
+
+    bindForm('newsletterForm', 'emailInput', 'formMsg');
+    bindForm('ctaForm', 'ctaEmailInput', 'ctaFormMsg');
+
+    // Navbar scroll state
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('is-scrolled', window.scrollY > 32);
+    }, { passive: true });
+  </script>
 </body>
 
 </html>

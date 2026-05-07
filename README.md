@@ -1,4 +1,4 @@
-# andig — Newsletter Landing Page
+# Landing — Newsletter Landing Page
 
 An open-source, single-page newsletter landing page. Clean dark design with editorial typography. No frameworks, no build tools — just HTML and CSS.
 
